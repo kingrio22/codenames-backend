@@ -1,0 +1,10 @@
+services:
+  codenames-backend:
+    build:
+      dockerfile: backend.Dockerfile
+    entrypoint: node dist/main.js
+
+  codenames:
+    image: nginx
+    ports:
+      - 1234:80
